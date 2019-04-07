@@ -1,8 +1,7 @@
   apply plugin: 'com.jfrog.bintray'
   
-  if (project.hasProperty ('android')) {
+  if (project.hasProperty ('android'))
     apply plugin: 'com.github.dcendents.android-maven'
-  }
   
   group = publishedGroupId
   
@@ -34,7 +33,7 @@
         gpg {
 					
           sign = true
-          passphrase = properties.getProperty ('bintray.gpg.password')
+          passphrase = 12345
           
         }
 				

@@ -27,18 +27,18 @@
       publicDownloadNumbers = publicDownloadNumbers.toBoolean ()
       
       version {
-				
+	
         desc = libraryDescription
-				
+	
         gpg {
-					
+	  
           sign = true
-          passphrase = 12345
+          passphrase = properties.getProperty ('bintray.gpg.password')
           
         }
 				
       }
-			
+      
     }
-		
+    
   }

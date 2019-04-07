@@ -121,6 +121,7 @@
           root.appendNode ('description', libraryDescription)
           root.appendNode ('name', libraryName)
           root.appendNode ('url', siteUrl)
+	  
           root.children ().last () + pomConfig
 					
         }
@@ -153,9 +154,9 @@
             printAddExclusions (it)
             it.excludeRules.each {
 						
-						rule ->
-              def exclusionNode = exclusionsNode.appendNode ('exclusion')
-              exclusionNode.appendNode ('groupId', rule.group)
+		rule ->
+              		def exclusionNode = exclusionsNode.appendNode ('exclusion')
+              		exclusionNode.appendNode ('groupId', rule.group)
 							
               if (rule.module != null)
                 exclusionNode.appendNode ('artifactId', rule.module)
@@ -174,10 +175,10 @@
 		
     if (dependenciesSize > 0) {
 			
-      println 'Added Dependencies for configuration: ${config.getName ()}'
-      println 'Dependencies size: ${dependenciesNode.children ().size ()}'
+      println "Added Dependencies for configuration: ${config.getName ()}"
+      println "Dependencies size: ${dependenciesNode.children ().size ()}"
 			
-    } else println 'No dependencies found for configuration: ${config.getName ()}'
+    } else println "No dependencies found for configuration: ${config.getName ()}"
     
   }
   
@@ -200,9 +201,9 @@
   }
   
   def printAdd (it) {
-    println 'Added dependency: ${it.group}:${it.name}:${it.version}'
+    println "Added dependency: ${it.group}:${it.name}:${it.version}"
   }
   
   def printAddExclusions (it) {
-    println 'Added exclusions for: ${it.group}:${it.name}:${it.version}'
+    println "Added exclusions for: ${it.group}:${it.name}:${it.version}"
   }

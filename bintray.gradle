@@ -14,7 +14,8 @@
     key = properties.getProperty ('bintray.apikey')
     publications = ['MyPublication']
     configurations = ['archives']
-		
+    override = true
+    
     pkg {
       
       repo = bintrayRepo

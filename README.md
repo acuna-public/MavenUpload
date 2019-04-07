@@ -133,7 +133,7 @@ So final `build.gradle` should look like this:
 		gradlew install
 		gradlew bintrayUpload
 		
-5) In your package at Bintray press `Add to JCenter` button to link it with оСутеук, fill the form and wait for 2-3 hours to add it. After that you can simply loads it as dependence:
+5) In your package at Bintray press `Add to JCenter` button to link it with JCenter, fill the form and wait for 2-3 hours to add it. After that you can simply loads it as dependence:
 
 		implementation 'com.pupkin:mylibrary:1.0'
 		

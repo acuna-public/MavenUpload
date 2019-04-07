@@ -30,12 +30,12 @@
 	
         desc = libraryDescription
 	
-        gpg {
-	  
-          sign = true
-          passphrase = properties.getProperty ('bintray.gpg.password')
-          
-        }
+        //gpg {
+	//  
+        //  sign = true
+        //  passphrase = properties.getProperty ('bintray.gpg.password')
+        //  
+        //}
 				
       }
       

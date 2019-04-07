@@ -12,8 +12,6 @@
 			
     }
     
-    packaging = 'aar'
-    
     task javadoc (type: Javadoc) {
 			
       source = android.sourceSets.main.java.srcDirs
@@ -23,8 +21,6 @@
 		
   } else { // Java libraries
     
-    packaging = 'jar'
-  
     task sourcesJar (type: Jar, dependsOn: classes) {
       
       classifier = 'sources'

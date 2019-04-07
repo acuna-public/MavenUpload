@@ -88,8 +88,12 @@
 				
         artifact sourcesJar
         artifact javadocJar
-        artifact ("$buildDir/outputs/aar/${project.getName ()}-release.aar")
-				
+	
+		if (project.hasProperty ('android'))
+       		artifact ("$buildDir/outputs/aar/${project.getName ()}-release.aar")
+		else
+			artifact ("$buildDir/libs/${project.getName ()}.jar")
+		
         groupId publishedGroupId
 				
         artifactId artifactId

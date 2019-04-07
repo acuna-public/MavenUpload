@@ -21,6 +21,7 @@
       name = libraryName
       desc = libraryDescription
       websiteUrl = siteUrl
+      issueTrackerUrl = issuesUrl
       vcsUrl = gitUrl
       licenses = libraryLicenses.split (',')
       publish = true

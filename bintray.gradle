@@ -23,7 +23,7 @@
       desc = libraryDescription
       websiteUrl = siteUrl
       vcsUrl = gitUrl
-      licenses = allLicenses
+      licenses = libraryLicenses.split (',')
       publish = true
       publicDownloadNumbers = publicDownloadNumbers.toBoolean ()
       

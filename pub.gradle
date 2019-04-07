@@ -12,6 +12,8 @@
 			
     }
     
+    packaging = 'aar'
+    
     task javadoc (type: Javadoc) {
 			
       source = android.sourceSets.main.java.srcDirs
@@ -20,10 +22,14 @@
     }
 		
   } else { // Java libraries
-		
+    
+    packaging = 'jar'
+  
     task sourcesJar (type: Jar, dependsOn: classes) {
+      
       classifier = 'sources'
       from sourceSets.main.allSource
+      
     }
 		
   }
@@ -86,7 +92,7 @@
 				
         artifact sourcesJar
         artifact javadocJar
-        artifact ('$buildDir/outputs/aar/${project.getName ()}-release.aar')
+        artifact ('$buildDir/outputs/$packaging/${project.getName ()}-release.$packaging')
 				
         groupId publishedGroupId
 				

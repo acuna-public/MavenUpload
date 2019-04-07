@@ -92,7 +92,7 @@
 				
         artifact sourcesJar
         artifact javadocJar
-        artifact ("$buildDir/outputs/$packaging/${project.getName ()}-release.$packaging")
+        artifact ("$buildDir/outputs/aar/${project.getName ()}-release.aar")
 				
         groupId publishedGroupId
 				

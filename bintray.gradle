@@ -18,7 +18,7 @@
     pkg {
       
       repo = bintrayRepo
-      name = bintrayName
+      name = libraryName
       desc = libraryDescription
       websiteUrl = siteUrl
       vcsUrl = gitUrl

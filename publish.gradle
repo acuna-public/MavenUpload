@@ -92,7 +92,7 @@
         if (project.hasProperty ('android'))
           artifact ("$buildDir/outputs/aar/${project.getName ()}-release.aar")
         else
-          artifact ("$buildDir/libs/${project.getName ()}-sources.jar")
+          artifact ("$buildDir/libs/${project.getName ()}-{$versionName}-sources.jar")
         
         groupId publishedGroupId
         

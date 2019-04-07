@@ -15,43 +15,43 @@ Your final `build.gradle` file should look something like this:
 		    
         repositories {
 			    
-			    google ()
-			    jcenter ()
-			    
-		    }
-		    
-		    dependencies {
-			    
-			    classpath 'com.android.tools.build:gradle:3.2.1'
-			    classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.1'
-			    classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
-			    
-		    }
-		    
-	    }
+            google ()
+            jcenter ()
+            
+        }
+        
+        dependencies {
+            
+            classpath 'com.android.tools.build:gradle:3.2.1'
+            classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.1'
+            classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+            
+         }
+        
+    }
 	    
-	allprojects {
+    allprojects {
 		
-		repositories {
-			
-			google ()
-			jcenter ()
-			
-		}
-		
-	}
-	
-	task clean (type: Delete) {
-		delete rootProject.buildDir
-	}
-	
-	subprojects {
-		
-		tasks.withType (Javadoc).all {
-			enabled = false
-		}
-		
-	}
+        repositories {
+            
+            google ()
+            jcenter ()
+            
+        }
+        
+    }
+    
+    task clean (type: Delete) {
+        delete rootProject.buildDir
+    }
+	    
+    subprojects {
+        
+        tasks.withType (Javadoc).all {
+            enabled = false
+        }
+        
+    }
   
   
  2) Add this lines to your module `build.gradle` file **after** `android` section (if it's Android module):

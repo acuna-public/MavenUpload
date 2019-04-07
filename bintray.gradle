@@ -34,7 +34,7 @@
         gpg {
 					
           sign = true
-          passphrase = properties.getProperty ("bintray.gpg.password")
+          //passphrase = properties.getProperty ('bintray.gpg.password')
           
         }
 				

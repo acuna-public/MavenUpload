@@ -10,8 +10,8 @@ Maven and Bintray upload plugin for Gradle allows you to upload your modules at 
    classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
 
 Your final `build.gradle` file should look something like this:
-
-		buildscript {
+    
+    buildscript {
 			
 			repositories {
 				
@@ -54,4 +54,8 @@ Your final `build.gradle` file should look something like this:
 		}
   
   
- 2) 
+ 2) Add this lines to your module `build.gradle` file:
+ 
+    apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/bintray.gradle'
+    apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/publish.gradle'
+  

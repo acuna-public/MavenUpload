@@ -207,3 +207,7 @@
   def printAddExclusions (it) {
     println "Added exclusions for: ${it.group}:${it.name}:${it.version}"
   }
+  
+  jar {
+    baseName ${baseName}-${appendix}-${classifier}.${extension}
+  }

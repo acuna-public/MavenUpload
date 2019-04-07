@@ -92,7 +92,7 @@
 				
         artifact sourcesJar
         artifact javadocJar
-        artifact ('$buildDir/outputs/$packaging/${project.getName ()}-release.$packaging')
+        artifact ("$buildDir/outputs/$packaging/${project.getName ()}-release.$packaging")
 				
         groupId publishedGroupId
 				
@@ -205,15 +205,4 @@
   
   def printAddExclusions (it) {
     println 'Added exclusions for: ${it.group}:${it.name}:${it.version}'
-  }
-  
-  install {
-    
-    repositories.mavenInstaller {
-      
-      pom.artifactId = artifactId
-      pom.packaging = packaging
-      
-    }
-    
   }

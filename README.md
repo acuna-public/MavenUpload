@@ -119,12 +119,12 @@ So final `build.gradle` should look like this:
 		libraryLicenses = GPL-3.0
 		publicDownloadNumbers = false
 		
-3.1) You can change your module `versionName` in `defaultConfig` section of your module `build.gradle` file to `project.property ('versionName')` as follows to get it from `gradle.properties` automatically:
+3.1) You can change your module `versionName` in `defaultConfig` section of your module `build.gradle` file to `project.getProperty ('versionName')` as follows to get it from `gradle.properties` automatically:
 
     defaultConfig {
       
       minSdkVersion 14
-      versionName project.property ('versionName')
+      versionName project.getProperty ('versionName')
       
     }
    

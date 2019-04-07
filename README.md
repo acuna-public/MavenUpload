@@ -88,20 +88,20 @@ So final `build.gradle` should look like this:
 		
 *For Java module:*
 
-		apply plugin: 'java-library'
- 		
-  	apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/bintray.gradle'
-  	apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/publish.gradle'
-  	
-  	dependencies {
-    	// ...
-  	}
-  	
-  	sourceCompatibility = '1.7'
-  	targetCompatibility = '1.7'
-
+	apply plugin: 'java-library'
+ 	
+	apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/bintray.gradle'
+	apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/publish.gradle'
+	
+	dependencies {
+    // ...
+	}
+	
+	sourceCompatibility = '1.7'
+	targetCompatibility = '1.7'
+	
 3) Add and edit this lines at your project `gradle.properties` file:
-
+		
 		libraryName = MyLibrary
 		versionName = 1.0
 		libraryDescription = MyLibrary is the greatest library in the world

@@ -94,7 +94,7 @@ So final `build.gradle` should look like this:
 	apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/publish.gradle'
 	
 	dependencies {
-    // ...
+      // ...
 	}
 	
 	sourceCompatibility = '1.7'

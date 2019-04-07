@@ -12,24 +12,24 @@ Maven and Bintray upload plugin for Gradle allows you to upload your modules at 
 Your final `build.gradle` file should look something like this:
   	
     buildscript {
-		
-    repositories {
-			
-			google ()
-			jcenter ()
-			
-		}
-		
-		dependencies {
-			
-			classpath 'com.android.tools.build:gradle:3.2.1'
-			classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.1'
-			classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
-			
-		}
-		
-	}
-	
+		    
+        repositories {
+			    
+			    google ()
+			    jcenter ()
+			    
+		    }
+		    
+		    dependencies {
+			    
+			    classpath 'com.android.tools.build:gradle:3.2.1'
+			    classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.1'
+			    classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+			    
+		    }
+		    
+	    }
+	    
 	allprojects {
 		
 		repositories {

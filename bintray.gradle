@@ -30,22 +30,22 @@
 	
         desc = libraryDescription
 	
-        //gpg {
-	//  
-        //  sign = true
-        //  passphrase = properties.getProperty ('bintray.gpg.password')
-        //  
+        gpg {
+	  
+          sign = true
+          passphrase = properties.getProperty ('bintray.gpg.password')
+          
+        }
+	
+	//mavenCentralSync {
+	//   
+        //    sync = true
+        //    user = properties.getProperty ('bintray.oss.user')
+        //    password = properties.getProperty ('bintray.oss.password')
+        //    close = '1'
+	//    
         //}
 	
-	mavenCentralSync {
-	    
-            sync = true
-            user = properties.getProperty ('bintray.oss.user')
-            password = properties.getProperty ('bintray.oss.password')
-            close = '1'
-	    
-         }
-	 
       }
       
     }

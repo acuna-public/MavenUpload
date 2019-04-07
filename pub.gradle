@@ -200,11 +200,11 @@
   }
   
   def printAdd (it) {
-    println 'Added dependency: '${it.group}:${it.name}:${it.version}''
+    println 'Added dependency: \'${it.group}:${it.name}:${it.version}\''
   }
   
   def printAddExclusions (it) {
-    println 'Added exclusions for: '${it.group}:${it.name}:${it.version}''
+    println 'Added exclusions for: \'${it.group}:${it.name}:${it.version}\''
   }
   
   install {
@@ -212,7 +212,7 @@
     repositories.mavenInstaller {
       
       pom.artifactId = artifactId
-      pom.packaging = 'jar'
+      pom.packaging = packaging
       
     }
     

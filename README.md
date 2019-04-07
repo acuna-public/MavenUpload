@@ -58,4 +58,3 @@ Your final `build.gradle` file should look something like this:
  
  		apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/bintray.gradle'
 		apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/publish.gradle'
-  

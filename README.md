@@ -61,6 +61,8 @@ Your final `build.gradle` file should look something like this:
 		
 So final `build.gradle` should look like this:
 
+*For Android module:*
+
     apply plugin: 'com.android.library'
     
     android {
@@ -83,6 +85,20 @@ So final `build.gradle` should look like this:
     dependencies {
       // ...
     }
+		
+*For Java module:*
+
+		apply plugin: 'java-library'
+ 		
+  	apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/bintray.gradle'
+  	apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/publish.gradle'
+  	
+  	dependencies {
+    	// ...
+  	}
+  	
+  	sourceCompatibility = '1.7'
+  	targetCompatibility = '1.7'
 
 3) Add and edit this lines at your project `gradle.properties` file:
 
@@ -92,7 +108,7 @@ So final `build.gradle` should look like this:
 		siteUrl = https://github.com/vasyapupkin/MyLibrary
 		gitUrl = https://github.com/vasyapupkin/MyLibrary.git
 		issuesUrl = https://github.com/vasyapupkin/MyLibrary/issues
-		publishedGroupId = com.yoursite
+		publishedGroupId = com.pupkin
 		artifactId = mylibrary
 		bintrayRepo = BintrayRepoName
 		developerId = vasyapupkin
@@ -112,4 +128,11 @@ So final `build.gradle` should look like this:
       
     }
    
-	4) 
+4) Open the terminal in Android Studio and turn this commands:
+
+		gradlew install
+		gradlew bintrayUpload
+		
+5) In your package at Bintray press `Add to JCenter` button to link it with оСутеук, fill the form and wait for 2-3 hours to add it. After that you can simply loads it as dependence:
+
+		implementation 'com.pupkin:mylibrary:1.0'

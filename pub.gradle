@@ -185,9 +185,9 @@
 		
     for (def item : dependenciesNode.children ()) {
 			
-      def itemGroupId = item.groupId [0].value ()
-      def itemArtifactId = item.artifactId [0].value ()
-      def itemVersion = item.version [0].value ()
+      def itemGroupId = item.groupId[0].value ()
+      def itemArtifactId = item.artifactId[0].value ()
+      def itemVersion = item.version[0].value ()
 			
       if (it.group == itemGroupId
         && it.name == itemArtifactId

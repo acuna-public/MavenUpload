@@ -51,3 +51,14 @@
     }
     
   }
+  
+  install {
+    
+    repositories.mavenInstaller {
+        
+        pom.artifactId = artifactId
+        pom.packaging = 'jar'
+	
+    }
+    
+}

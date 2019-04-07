@@ -96,7 +96,7 @@
 				
         groupId publishedGroupId
 				
-        artifactId artifact
+        artifactId artifactId
         version libraryVersion
 				
         pom.withXml {

@@ -1,7 +1,7 @@
   apply plugin: 'maven'
   apply plugin: 'maven-publish'
   
-  version = libraryVersion
+  version = versionName
   
   if (project.hasProperty ('android')) { // Android libraries
     
@@ -92,12 +92,12 @@
         if (project.hasProperty ('android'))
           artifact ("$buildDir/outputs/aar/${project.getName ()}-release.aar")
         else
-          artifact ("$buildDir/libs/${project.getName ()}-$libraryVersion-sources.jar")
+          artifact ("$buildDir/libs/${project.getName ()}-$versionName-sources.jar")
         
         groupId publishedGroupId
         
         artifactId artifactId
-        version libraryVersion
+        version versionName
         
         pom.withXml {
           

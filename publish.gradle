@@ -1,78 +1,78 @@
-	apply plugin: 'maven'
+  apply plugin: 'maven'
   apply plugin: 'maven-publish'
   
-	publishing {
-		
-		publications {
-			
-			maven (MavenPublication) {
-				
+  publishing {
+    
+    publications {
+      
+      maven (MavenPublication) {
+        
         groupId publishedGroupId
         artifactId artifactId
         version libraryVersion
-				
-				pom {
-					
-					licenses {
-						
-						license {
-							
-							name licenseName
-							url licenseUrl
-							distribution 'repo'
-							
-						}
-						
-					}
-					
-					developers {
-						
-						developer {
-							
-							id developerId
-							name developerName
-							email developerEmail
-							
-						}
-						
-					}
-					
-					scm {
-						url gitUrl
-					}
-					
-				}
-				
-				if (project.hasProperty ('android')) {
-					
-					pom.withXml {
-						
-						asNode ().dependencies.'*'.findAll () {
-							
-							it.scope.text () == 'runtime' &&
-							project.configurations.compile.allDependencies.find {
+        
+        pom {
+          
+          licenses {
+            
+            license {
+              
+              name licenseName
+              url licenseUrl
+              distribution 'repo'
+              
+            }
+            
+          }
+          
+          developers {
+            
+            developer {
+              
+              id developerId
+              name developerName
+              email developerEmail
+              
+            }
+            
+          }
+          
+          scm {
+            url gitUrl
+          }
+          
+        }
+        
+        if (project.hasProperty ('android')) {
+          
+          pom.withXml {
+            
+            asNode ().dependencies.'*'.findAll () {
+              
+              it.scope.text () == 'runtime' &&
+              project.configurations.compile.allDependencies.find {
                 
                 println "Added dependency: ${it.group}:${it.name}:${it.version}"
-								dep -> dep.name == it.artifactId.text ()
+                dep -> dep.name == it.artifactId.text ()
                 
-							}
-							
-						}.each () {
-							it.scope*.value = 'implementation'
-						}
-						
-					}
-					
-				}
-				
-			}
-			
-		}
-		
-	}
+              }
+              
+            }.each () {
+              it.scope*.value = 'implementation'
+            }
+            
+          }
+          
+        }
+        
+      }
+      
+    }
+    
+  }
   
-	if (project.hasProperty ('android')) {
-		
+  if (project.hasProperty ('android')) {
+    
     jar {
       
       from sourceSets.main.output

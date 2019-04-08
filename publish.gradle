@@ -1,8 +1,10 @@
   apply plugin: 'maven'
   apply plugin: 'maven-publish'
   
+  version = libraryVersion
+  
   def isAndroid = project.hasProperty ('android');
-	
+  
   if (isAndroid) { // Android libraries
     
     task sourcesJar (type: Jar) {

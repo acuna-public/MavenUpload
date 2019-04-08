@@ -14,7 +14,7 @@
     key = properties.getProperty ('bintray.apikey')
     publications = ['maven']
     configurations = ['archives']
-    override = overrideExists.toBoolean ()
+    override = true
     
     pkg {
       

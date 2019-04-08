@@ -1,7 +1,7 @@
   apply plugin: 'maven'
   apply plugin: 'maven-publish'
   
-  version = versionName
+  version = libraryVersion
   
   if (project.hasProperty ('android')) { // Android libraries
     
@@ -97,7 +97,7 @@
         groupId publishedGroupId
         
         artifactId artifactId
-        version versionName
+        version libraryVersion
         
         pom.withXml {
           

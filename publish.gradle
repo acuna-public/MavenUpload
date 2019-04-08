@@ -43,36 +43,19 @@
           
         }
         
-        if (project.hasProperty ('android')) {
+        if (!project.hasProperty ('android')) {
           
-          pom.withXml {
-            
-            asNode ().dependencies.'*'.findAll () {
-              
-              println "Added dependency: ${it.group}:${it.name}:${it.version}"
-              it.scope.text() == 'runtime'  && project.configurations.compile.allDependencies.find { dep ->
-                    dep.name == it.artifactId.text()
-                }
-            }.each () {
-              it.scope*.value = 'implementation'
-            }
-            
+          artifact (sourcesJar) {
+            classifier = 'sources'
+          }
+          
+          artifact (javadocJar) {
+            classifier = 'javadoc'
           }
           
         }
         
       }
-      
-    }
-    
-  }
-  
-  if (project.hasProperty ('android')) {
-    
-    jar {
-      
-      from sourceSets.main.output
-      from sourceSets.main.allJava
       
     }
     

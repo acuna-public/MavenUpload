@@ -101,9 +101,9 @@ So final `build.gradle` should look like this:
 	targetCompatibility = '1.7'
 	
 3) Add and edit this lines at your project `gradle.properties` file:
-		
+
 		libraryName = MyLibrary
-		versionName = 1.0
+		libraryVersion = 1.0
 		libraryDescription = MyLibrary is the greatest library in the world
 		siteUrl = https://github.com/vasyapupkin/MyLibrary
 		gitUrl = https://github.com/vasyapupkin/MyLibrary.git
@@ -118,6 +118,7 @@ So final `build.gradle` should look like this:
 		licenseUrl = https://www.gnu.org/licenses/gpl-3.0.txt
 		libraryLicenses = GPL-3.0
 		publicDownloadNumbers = false
+		overrideExists = false
 		
 3.1) You can change your module `versionName` in `defaultConfig` section of your module `build.gradle` file to `project.getProperty ('versionName')` as follows to get it from `gradle.properties` automatically:
 

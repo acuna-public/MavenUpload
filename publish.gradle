@@ -129,14 +129,6 @@
     
   }
   
-  jar {
-    
-    manifest {
-      attributes 'Main-Class': libraryName
-    }
-    
-  }
-  
   def getDependencies (config, dependenciesNode) {
     
     config.allDependencies.each {

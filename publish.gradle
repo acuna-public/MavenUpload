@@ -6,13 +6,11 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             pom {
-                name = 'My Library'
-                description = 'A concise description of my library'
-                url = 'http://www.example.com/library'
-                properties = [
-                    myProp: "value",
-                    "prop.with.dots": "anotherValue"
-                ]
+            
+                name 'My Library'
+                description 'A concise description of my library'
+                url 'http://www.example.com/library'
+                
                 licenses {
                     license {
                         name = 'The Apache License, Version 2.0'

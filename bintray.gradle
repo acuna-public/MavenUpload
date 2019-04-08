@@ -12,7 +12,7 @@
 		
     user = properties.getProperty ('bintray.user')
     key = properties.getProperty ('bintray.apikey')
-    publications = ['MyPublication']
+    publications = ['maven']
     configurations = ['archives']
     override = overrideExists.toBoolean ()
     

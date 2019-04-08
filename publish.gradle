@@ -84,7 +84,7 @@
     
     publications {
       
-      mave (MavenPublication) {
+      maven (MavenPublication) {
         
         groupId publishedGroupId
         artifactId artifactId

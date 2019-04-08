@@ -129,6 +129,14 @@
     
   }
   
+  jar {
+    
+    manifest {
+      attributes 'Main-Class': application.mainClassName
+    }
+    
+  }
+  
   def getDependencies (config, dependenciesNode) {
     
     config.allDependencies.each {

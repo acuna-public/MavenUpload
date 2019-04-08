@@ -110,7 +110,7 @@ So final `build.gradle` should look like this:
 		issuesUrl = https://github.com/vasyapupkin/MyLibrary/issues
 		publishedGroupId = com.pupkin
 		artifactId = mylibrary
-		bintrayRepo = BintrayRepoName
+		bintrayRepo = maven
 		developerId = vasyapupkin
 		developerName = Vasya Pupkin
 		developerEmail = vasya@pupkin.com

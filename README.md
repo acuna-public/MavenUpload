@@ -14,10 +14,7 @@ Your final `build.gradle` file should look something like this:
     buildscript {
       
       repositories {
-            
-        google ()
-        jcenter ()
-         
+        // ...
       }
       
       dependencies {
@@ -26,29 +23,6 @@ Your final `build.gradle` file should look something like this:
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.1'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
         
-      }
-      
-    }
-	  
-    allprojects {
-      
-      repositories {
-        
-        google ()
-        jcenter ()
-        
-      }
-      
-    }
-    
-    task clean (type: Delete) {
-      delete rootProject.buildDir
-    }
-    
-    subprojects {
-      
-      tasks.withType (Javadoc).all {
-        enabled = false
       }
       
     }
@@ -66,17 +40,7 @@ So final `build.gradle` should look like this:
     apply plugin: 'com.android.library'
     
     android {
-      
-      compileSdkVersion 27
-      
-      defaultConfig {
-        // ...
-      }
-      
-      buildTypes {
-        // ...
-      }
-      
+      // ...
     }
     
     apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/bintray.gradle'

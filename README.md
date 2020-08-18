@@ -30,7 +30,7 @@ Your final `build.gradle` file should look something like this:
   
  2) Add this lines to your module `build.gradle` file **after** `android` section (if it's Android module):
  
- 		apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/bintray.gradle'
+		apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/bintray.gradle'
 		apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/publish.gradle'
 		
 So final `build.gradle` should look like this:
@@ -52,10 +52,10 @@ So final `build.gradle` should look like this:
 		
 *For Java module:*
 
-	apply plugin: 'java-library'
+		apply plugin: 'java-library'
  	
-	apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/bintray.gradle'
-	apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/publish.gradle'
+		apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/bintray.gradle'
+		apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/publish.gradle'
 	
 	dependencies {
       // ...

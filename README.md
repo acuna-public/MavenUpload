@@ -66,7 +66,7 @@ apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/b
 apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/publish.gradle'
 
 dependencies {
-		// ...
+	// ...
 }
 ```
 

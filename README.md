@@ -3,7 +3,7 @@ Maven and Bintray upload plugin for Gradle allows you to upload your modules at 
 
 **Usage**
 
-1) Add this lines to your project root (not module!) `build.gradle` file to the `dependencies` section:
+1. Add this lines to your project root (not module!) `build.gradle` file to the `dependencies` section:
 
 ```groove
 classpath 'com.android.tools.build:gradle:3.2.1'
@@ -12,7 +12,8 @@ classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
 ```
 
 Your final `build.gradle` file should look something like this:
-  	
+
+```groove
     buildscript {
       
       repositories {
@@ -28,17 +29,20 @@ Your final `build.gradle` file should look something like this:
       }
       
     }
+```
   
-  
- 2) Add this lines to your module `build.gradle` file **after** `android` section (if it's Android module):
- 
+ 2. Add this lines to your module `build.gradle` file **after** `android` section (if it's Android module):
+
+```groove
 		apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/bintray.gradle'
 		apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/publish.gradle'
-		
+```
+
 So final `build.gradle` should look like this:
 
 *For Android module:*
 
+```groove
     apply plugin: 'com.android.library'
     
     android {
@@ -51,9 +55,11 @@ So final `build.gradle` should look like this:
     dependencies {
       // ...
     }
-		
+```
+
 *For Java module:*
 
+```groove
 	apply plugin: 'java-library'
 	
 	apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/bintray.gradle'
@@ -62,9 +68,11 @@ So final `build.gradle` should look like this:
 	dependencies {
       // ...
 	}
-	
-3) Add and edit this lines at your project `gradle.properties` file:
+```
 
+3. Add and edit this lines at your project `gradle.properties` file:
+
+```groove
 		libraryName = MyLibrary
 		libraryVersion = 1.0
 		libraryDescription = MyLibrary is the greatest library in the world
@@ -82,23 +90,29 @@ So final `build.gradle` should look like this:
 		libraryLicenses = GPL-3.0
 		publicDownloadNumbers = false
 		overrideExists = false
-		
-3.1) You can change your module `versionName` in `defaultConfig` section of your module `build.gradle` file to `project.getProperty ('versionName')` as follows to get it from `gradle.properties` automatically:
+```
 
+3.1. You can change your module `versionName` in `defaultConfig` section of your module `build.gradle` file to `project.getProperty ('versionName')` as follows to get it from `gradle.properties` automatically:
+
+```groove
     defaultConfig {
       
       minSdkVersion 14
       versionName project.getProperty ('versionName')
       
     }
-   
-4) Open the terminal in Android Studio and turn this commands:
+```
 
+4. Open the terminal in Android Studio and turn this commands:
+
+```groove
 		gradlew install
 		gradlew bintrayUpload
-		
-5) In your package at Bintray press `Add to JCenter` button to link it with JCenter, fill the form and wait for 2-3 hours to add it. After that you can simply loads it as dependence:
+```
+5. In your package at Bintray press `Add to JCenter` button to link it with JCenter, fill the form and wait for 2-3 hours to add it. After that you can simply loads it as dependence:
 
+```groove
 		implementation 'com.pupkin:mylibrary:1.0'
-		
+```
+
 **Enjoy!**

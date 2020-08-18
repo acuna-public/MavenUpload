@@ -1,5 +1,5 @@
 # MavenUpload
-Maven and Bintray upload plugin for Gradle allows you to upload your modules at remote repositories.
+Maven and Bintray upload plugin for Gradle allows you to upload your modules at remote Maven and Bintray repositories.
 
 **Usage**
 
@@ -60,9 +60,6 @@ So final `build.gradle` should look like this:
 	dependencies {
       // ...
 	}
-	
-	sourceCompatibility = '1.7'
-	targetCompatibility = '1.7'
 	
 3) Add and edit this lines at your project `gradle.properties` file:
 

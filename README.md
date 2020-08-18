@@ -69,7 +69,7 @@ So final `build.gradle` should look like this:
 		siteUrl = https://github.com/vasyapupkin/MyLibrary
 		gitUrl = https://github.com/vasyapupkin/MyLibrary.git
 		issuesUrl = https://github.com/vasyapupkin/MyLibrary/issues
-		publishedGroupId = com.pupkin
+		publishedGroupId = com.site
 		artifactId = mylibrary
 		bintrayRepo = maven
 		developerId = vasyapupkin

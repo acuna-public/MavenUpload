@@ -1,5 +1,5 @@
 # MavenUpload
-Maven and Bintray upload plugin for Gradle allows you to upload your modules at remote Maven and Bintray repositories.
+Maven and Bintray upload plugin for Gradle allows you to upload your modules at remote Maven repositories.
 
 **Usage**
 

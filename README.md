@@ -69,7 +69,7 @@ So final `build.gradle` should look like this:
 		siteUrl = https://github.com/vasyapupkin/MyLibrary
 		gitUrl = https://github.com/vasyapupkin/MyLibrary.git
 		issuesUrl = https://github.com/vasyapupkin/MyLibrary/issues
-		publishedGroupId = com.site
+		publishedGroupId = com.pupkin
 		artifactId = mylibrary
 		bintrayRepo = maven
 		developerId = vasyapupkin
@@ -97,6 +97,6 @@ So final `build.gradle` should look like this:
 		
 5) In your package at Bintray press `Add to JCenter` button to link it with JCenter, fill the form and wait for 2-3 hours to add it. After that you can simply loads it as dependence:
 
-		implementation 'com.site:mylibrary:1.0'
+		implementation 'com.pupkin:mylibrary:1.0'
 		
 **Enjoy!**

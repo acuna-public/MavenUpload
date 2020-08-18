@@ -16,18 +16,18 @@ Your final `build.gradle` file should look something like this:
 ```groove
 buildscript {
 
-	repositories {
-		// ...
-	}
+repositories {
+// ...
+}
 
-	dependencies {
-		
-		classpath 'com.android.tools.build:gradle:3.2.1'
-		classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.1'
-		classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
-		
-	}
-	
+dependencies {
+
+classpath 'com.android.tools.build:gradle:3.2.1'
+classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.1'
+classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+
+}
+
 }
 ```
   

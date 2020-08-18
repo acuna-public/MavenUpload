@@ -52,10 +52,10 @@ So final `build.gradle` should look like this:
 		
 *For Java module:*
 
-		apply plugin: 'java-library'
- 	
-		apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/bintray.gradle'
-		apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/publish.gradle'
+	apply plugin: 'java-library'
+	
+	apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/bintray.gradle'
+	apply from: 'https://raw.githubusercontent.com/acuna-public/MavenUpload/master/publish.gradle'
 	
 	dependencies {
       // ...
@@ -97,6 +97,6 @@ So final `build.gradle` should look like this:
 		
 5) In your package at Bintray press `Add to JCenter` button to link it with JCenter, fill the form and wait for 2-3 hours to add it. After that you can simply loads it as dependence:
 
-		implementation 'com.pupkin:mylibrary:1.0'
+		implementation 'com.site:mylibrary:1.0'
 		
 **Enjoy!**

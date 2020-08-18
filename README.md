@@ -109,7 +109,7 @@ defaultConfig {
 gradlew install
 gradlew bintrayUpload
 ```
-5. In your package at Bintray press `Add to JCenter` button to link it with JCenter, fill the form and wait for 2-3 hours to add it. After that you can load it at your project as dependency:
+5. In your package at Bintray press `Add to JCenter` button to link it with JCenter, fill the form and wait for 2-3 hours to add it. After that you can add it to your project as dependency:
 
 ```groove
 implementation 'com.pupkin:mylibrary:1.0'

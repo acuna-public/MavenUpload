@@ -1,0 +1,153 @@
+	plugins {
+		
+		id 'java'
+		id 'com.android.application'
+		id 'maven-publish'
+		id 'signing'
+		
+	}
+	
+	java {
+		
+		sourceCompatibility = JavaVersion.VERSION_1_8
+		targetCompatibility = JavaVersion.VERSION_1_8
+		withJavadocJar ()
+		withSourcesJar ()
+		
+	}
+	
+	group publishedGroupId
+	archivesBaseName = artifactId
+	version = libraryVersion
+	
+	repositories {
+		mavenCentral ()
+	}
+	
+	dependencies {
+		
+		testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.2'
+		testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.2'
+		
+	}
+	
+	test {
+		useJUnitPlatform ()
+	}
+	
+	jar {
+		
+		from sourceSets.main.output
+		from sourceSets.main.allJava
+		
+	}
+	
+	signing {
+		sign publishing.publications
+	}
+	
+	publishing {
+		
+		publications {
+			
+			mavenJava (MavenPublication) {
+				
+				customizePom (pom)
+				
+				groupId group
+				artifactId archivesBaseName
+				version version
+				
+				from components.java
+				
+			}
+			
+		}
+		
+		repositories {
+			
+			maven {
+				
+				url 'https://oss.sonatype.org/service/local/staging/deploy/maven2'
+				
+				credentials {
+					
+					username username
+					password password
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	def customizePom (pom) {
+		
+		pom.withXml {
+			
+			def root = asNode ()
+			
+			root.dependencies.removeAll { dep ->
+				dep.scope == 'test'
+			}
+			
+			root.children ().last () + {
+				
+				resolveStrategy = DELEGATE_FIRST
+				
+				name libraryName
+				description libraryDescription
+				url siteUrl
+				
+				organization {
+					
+					name developerName
+					url siteUrl
+					
+				}
+				
+				issueManagement {
+					
+					system 'GitHub'
+					url issuesUrl
+					
+				}
+				
+				licenses {
+					
+					license {
+						
+						name licenseName
+						url licenseUrl
+						
+					}
+					
+				}
+				
+				scm {
+					
+					url siteUrl
+					connection 'scm:' + siteUrl
+					developerConnection 'scm:' + gitUrl
+					
+				}
+				
+				developers {
+					
+					developer {
+						
+						id username
+						name developerName
+						email developerEmail
+						
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+	}
